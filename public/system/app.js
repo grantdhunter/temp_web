@@ -15,6 +15,6 @@ function startApp() {
         //setup routes
         //display event list
         $routeProvider.when('/', {templateUrl: 'partials/musings', controller:'musingsCtrl'});
-      
+       $routeProvider.when('/musings', {templateUrl: 'partials/musings', controller:'musingsCtrl'});
     });
 }
