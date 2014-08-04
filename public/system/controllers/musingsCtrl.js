@@ -1,0 +1,4 @@
+function eventCtrl($scope, $routeParams){
+
+
+}

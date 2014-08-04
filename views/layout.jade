@@ -1,18 +1,15 @@
-doctype 5
+doctype html
 html
     head
+        meta(charset='utf8')
+        base(href='/')
         title= pageTitle 
-        
         //css libraries
-        link(rel='stylesheet', href='bower_components/bootstrap/dist/bootstrap.css')
-        
-        
+        link(rel='stylesheet', href='/bootstrap/dist/css/bootstrap.min.css')
         //js libraries
-        script(src='bower_components/angular/angular.js')
-        
-        block head
-   
+        script(src='/jquery/dist/jquery.min.js')
+        script(src='/angular/angular.min.js')
+        script(src='/bootstrap/dist/js/bootstrap.min.js')
     body
-        block header
         block body
-        block footer
+
