@@ -1,4 +1,4 @@
-function eventCtrl($scope, $routeParams){
-
+function musingsCtrl($scope, $routeParams){
+    console.log("Musing Controller");
 
 }

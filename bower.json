@@ -1,9 +1,10 @@
 {
-  "name": "temp_web",
-  "description": "small landing page style app",
-  "version": "0.0.1",
-  "dependencies": {
-    "bootstrap": "~3.2.0",
-    "angular": "~1.2.21"
-  }
+    "name": "temp_web",
+    "description": "small landing page style app",
+    "version": "0.0.1",
+    "dependencies": {
+        "bootstrap": "~3.2.0",
+        "angular": "~1.2.21",
+        "angular-route": "1.2.x"
+    }
 }

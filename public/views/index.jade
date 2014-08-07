@@ -9,10 +9,12 @@ html
         //js libraries
         script(src='/jquery/dist/jquery.min.js')
         script(src='/angular/angular.min.js')
+        script(src='/angular-route/angular-route.min.js')
         script(src='/bootstrap/dist/js/bootstrap.min.js')
         
         //custom js
+        script(src='/system/app.js')
         script(src='/system/controllers/musingsCtrl.js')
     body
-        block body
+         div(ng-view)
 
