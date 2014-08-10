@@ -6,17 +6,14 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
 var routes = require('./routes/index');
-var users = require('./routes/users');
 
 var app = express();
 
 
-//global values
-global.siteTitle =  "Grant-Hunter.ca";
-global.sitePages = ["Musings","Projects", "Work", "About"];
-
 
 // view engine setup
++app.set('views', path.join(__dirname, 'views'));
++app.set('view engine', 'jade');
 
 app.use(favicon());
 app.use(logger('dev'));
@@ -27,7 +24,10 @@ app.use(require('less-middleware')(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'bower_components')));
 
+
 app.use('/', routes);
+
+
 
 
 /// catch 404 and forward to error handler

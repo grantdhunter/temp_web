@@ -3,12 +3,12 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res) {
-  res.sendfile('index');
+  res.render('index');
 });
 
 router.get('/partials/:name', function(req, res) {
-    console.log(req);
-  res.sendfile('partials/' + req.params.name);
+     console.log('HERE:::\n'+ req.path);
+  res.render('partials/' + req.params.name);
 });
 
 module.exports = router;
