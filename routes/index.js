@@ -7,7 +7,6 @@ router.get('/', function(req, res) {
 });
 
 router.get('/partials/:name', function(req, res) {
-     console.log('HERE:::\n'+ req.path);
   res.render('partials/' + req.params.name);
 });
 

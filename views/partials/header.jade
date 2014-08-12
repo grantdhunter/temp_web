@@ -1,4 +1,4 @@
-nav.navbar.navbar-default(ng-controller="headerCtrl")
+nav.navbar.navbar-default
     div.container-fluid
         div.navbar-header
             button.navbar-toggle(type='button' data-type='collapse' data-target='#dropdown-nav')
@@ -11,7 +11,7 @@ nav.navbar.navbar-default(ng-controller="headerCtrl")
         div.collapse.navbar-collapse#dropdown-nav
             ul.nav.navbar-nav
                 li(ng-repeat='page in sitePages')
-                     a(href="/partials/{{page.toLowerCase()}}") {{page}}
+                     a(ng-click="switchPage(page)") {{page}}
                     
 
    

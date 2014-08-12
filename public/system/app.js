@@ -2,7 +2,7 @@
 
 
 // Declare app level module which depends on filters, and services
-var temp_web = angular.module('temp_web', ['ngRoute']);
+var webApp = angular.module('webApp', ['ngRoute']);
 
 
 $(startApp)
@@ -10,12 +10,10 @@ $(startApp)
 function startApp() {
 
 
-    temp_web.config(function($provide, $routeProvider) {
+    webApp.config(function($provide, $routeProvider) {
 
         //setup routes
-        $routeProvider.when('/', {templateUrl: 'partials/musings', controller:'musingsCtrl'});
-        $routeProvider.when('/musings', {templateUrl: 'partials/musings', controller:'musingsCtrl'});
+        $routeProvider.when('/', {templateUrl: 'partials/index', controller:'appCtrl'});
     });
-
-    angular.bootstrap(document,['temp_web']);
+    angular.bootstrap(document,['webApp']);
 }
