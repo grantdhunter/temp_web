@@ -5,7 +5,7 @@ html
         base(href='/')
         title= pageTitle 
         //css libraries
-        link(rel='stylesheet', href='/bootstrap/dist/css/bootstrap.min.css')
+        link(rel='stylesheet', href='stylesheets/dist/css/bootstrap.css')
         //js libraries
         script(src='/jquery/dist/jquery.min.js')
         script(src='/angular/angular.min.js')
@@ -15,8 +15,12 @@ html
         //custom js
         script(src='/system/app.js')
         //controllers
-        script(src='/system/controllers/musingsCtrl.js')
         script(src='/system/controllers/appCtrl.js')
-    body
+        script(src='/system/controllers/musingsCtrl.js')
+        script(src='/system/controllers/workCtrl.js')
+        script(src='/system/controllers/projectsCtrl.js')
+        script(src='/system/controllers/aboutCtrl.js')
+    body(ng-controller="appCtrl")
+         div(ng-include="'/partials/header.jade'")
          div(ng-view)
 
