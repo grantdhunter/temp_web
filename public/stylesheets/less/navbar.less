@@ -12,16 +12,28 @@
     position: relative;
     min-height: @navbar-height; // Ensure a navbar always shows (e.g., without a .navbar-brand in collapsed mode)
     margin-bottom: @navbar-margin-bottom;
-    border: 1px solid transparent;
-
-    &:after {
+    border: 1px solid @navbar-default-border;
+    margin-right: 100px;
+    margin-left: 100px;
+    &:before {
         content: ' ';
-        border-bottom: 75px solid #FFF !important;
-        border-left: 65px solid transparent !important;
+        border-bottom: 0px solid @navbar-default-bg !important;
+        border-left: 99px solid transparent !important;
         border-right: 0px solid transparent !important;
         position: absolute !important;
-        right: -1px !important;
+        left: -100px !important;
         bottom: -1px !important;
+        border-top: 77px solid @navbar-default-bg !important;
+    }
+    &:after {
+        content: ' ';
+        border-bottom: 0px solid @navbar-default-bg !important;
+        border-left: 0px solid transparent !important;
+        border-right: 99px solid transparent !important;
+        position: absolute !important;
+        right: -100px !important;
+        bottom: -1px !important;
+        border-top: 77px solid @navbar-default-bg !important;
     }
 
     // Prevent floats from breaking the navbar
