@@ -2,7 +2,7 @@
 
 
 // Declare app level module which depends on filters, and services
-var webApp = angular.module('webApp', ['ngRoute','ngSanitize']);
+var webApp = angular.module('webApp', ['ngRoute','ngSanitize', 'ngResource']);
 
 
 $(startApp)
@@ -40,7 +40,7 @@ function startApp() {
         $locationProvider.html5Mode(true);
     });
 
-
+    webApp.factory('apiService', apiService);
 
     angular.bootstrap(document, ['webApp']);
 }

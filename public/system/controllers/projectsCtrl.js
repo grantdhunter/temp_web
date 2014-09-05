@@ -1,5 +1,9 @@
-function projectsCtrl($scope, $routeParams) {
+function projectsCtrl($scope, $routeParams, apiService) {
 
+    apiService.github('grantdhunter');
+    
+    
+    
     $scope.projects = [{
         title: 'SilentZone',
         link: 'http://silentzone.ca',

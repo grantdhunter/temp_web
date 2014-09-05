@@ -11,6 +11,7 @@ html
         script(src='/angular/angular.min.js')
         script(src='/angular-route/angular-route.min.js')
         script(src='/angular-sanitize/angular-sanitize.min.js')
+        script(src='/angular-resource/angular-resource.min.js')
         script(src='/bootstrap/dist/js/bootstrap.min.js')
         
         //custom js
@@ -21,6 +22,8 @@ html
         script(src='/system/controllers/workCtrl.js')
         script(src='/system/controllers/projectsCtrl.js')
         script(src='/system/controllers/aboutCtrl.js')
+        //services
+        script(src='/system/services/apiService.js')
     body(ng-controller="appCtrl")
          div(ng-include="'/partials/header.jade'")
          div(ng-view)
