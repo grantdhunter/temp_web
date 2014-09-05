@@ -17,10 +17,18 @@ function appCtrl($scope) {
     
     $scope.currentPage = $scope.sitePages[0];
 
-    $scope.switchPage = function (page) {
+    $scope.setCurrentPage = function(page) {
+        if(page === '/') {
+            page = $scope.sitePages[0];   
+        }
         $scope.currentPage = page;
     }
 
-
-
+    $scope.onPage = function(page) {
+        if($scope.currentPage === page) {
+            return true; 
+        } else {
+            return false;
+        }
+    }
 }

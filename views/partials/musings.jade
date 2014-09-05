@@ -1,7 +1,27 @@
-div.row
-    div.col-xs-12
-        h3 Musings
-div.row
-    div.col-xs-12
-        |{{message}}
-        input(ng-model="message")
+div.container-fluid
+    div.row
+        div.col-xs-8
+            div.row(ng-repeat='musing in musings')
+                div.col-xs-12
+                    div.panel.panel-default
+                        div.panel-heading
+                            h2.panel-title
+                                |{{musing.title}}
+                                small
+                                    | {{musing.date}}
+                        div.panel-body
+                            img(src='{{musing.img}}')
+                            p
+                                |{{musing.body}}
+                            
+        div.col-xs-4
+            div.row
+                div.col-xs-12
+                    div.panel.panel-default
+                        div.panel-heading
+                            h2.panel-title
+                                |Link Dump
+                        div.panel-body
+                            dev.list-group
+                                a(href='{{link.link}}', ng-repeat='link in linkDump' ).list-group-item
+                                    |{{link.title}}

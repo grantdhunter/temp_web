@@ -1,5 +1,18 @@
-div.row
-    div.col-xs-12
-        h3 Work
-div.row
-    div.col-xs-12
+div.container-fluid
+    div.row
+        div.col-xs-8.col-xs-offset-2(ng-repeat='job in jobs')
+            div.panel.panel-default
+                div.panel-heading
+                    h3.panel-title
+                        |{{job.company}}
+                        small
+                            | {{job.date}}
+                div.panel-body
+                    p
+                        |Position: 
+                        b
+                            |{{job.position}}
+                    p
+                        |Description: 
+                        b
+                            |{{job.description}}

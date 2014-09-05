@@ -2,7 +2,7 @@
 
 
 // Declare app level module which depends on filters, and services
-var webApp = angular.module('webApp', ['ngRoute']);
+var webApp = angular.module('webApp', ['ngRoute','ngSanitize']);
 
 
 $(startApp)
@@ -14,6 +14,10 @@ function startApp() {
 
         //setup routes
         $routeProvider.when('/', {
+            templateUrl: 'partials/musings',
+            controller: 'musingsCtrl'
+        });
+        $routeProvider.when('/musings', {
             templateUrl: 'partials/musings',
             controller: 'musingsCtrl'
         });
@@ -29,14 +33,14 @@ function startApp() {
             templateUrl: 'partials/about',
             controller: 'aboutCtrl'
         });
-         $routeProvider.otherwise({
+        $routeProvider.otherwise({
             redirectTo: '/'
-         });
-        
+        });
+
         $locationProvider.html5Mode(true);
     });
-    
-    
-    
+
+
+
     angular.bootstrap(document, ['webApp']);
 }
