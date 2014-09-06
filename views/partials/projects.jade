@@ -24,5 +24,5 @@ div.container-fluid
                                 |Github Projects
                         div.panel-body
                             dev.list-group
-                                a(href='{{project.link}}', ng-repeat='project in githubProjects' ).list-group-item
-                                    |{{project.title}}
+                                a(href='{{project.html_url}}', target='_blank', ng-repeat='project in githubProjects' ).list-group-item
+                                    |{{project.name}}

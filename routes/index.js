@@ -1,5 +1,5 @@
 var express = require('express');
-var github = require('github');
+var GitHubApi = require('github');
 var http = require('http');
 var router = express.Router();
 
@@ -14,17 +14,17 @@ router.get('/api/github/:user', function (req, res) {
         // optional
         debug: true,
         protocol: "https",
-        host: "github.com",
-        pathPrefix: "/api/v3", // for some GHEs
+        host: "api.github.com",
+        // pathPrefix: "/api/v3", // for some GHEs
         timeout: 5000
     });
 
     github.repos.getFromUser({
-        user: req.params.user
+        user: 'grantdhunter'
     }, function (err, data) {
-        console.log(data);
-        res.send(data)
+        res.send(data);
     });
+
 });
 
 /* GET home page. */

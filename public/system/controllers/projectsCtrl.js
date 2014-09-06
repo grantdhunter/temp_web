@@ -1,9 +1,13 @@
 function projectsCtrl($scope, $routeParams, apiService) {
 
-    apiService.github('grantdhunter');
-    
-    
-    
+    apiService.query({
+        user: 'grantdhunter'
+    }, function (projects) {
+        $scope.githubProjects = projects;
+    });
+
+
+
     $scope.projects = [{
         title: 'SilentZone',
         link: 'http://silentzone.ca',
