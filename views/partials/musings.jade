@@ -23,5 +23,5 @@ div.container-fluid
                                 |Link Dump
                         div.panel-body
                             dev.list-group
-                                a(href='{{link.link}}', ng-repeat='link in linkDump' ).list-group-item
+                                a(href='{{link.link}}', target='_blank', ng-repeat='link in linkDump' ).list-group-item
                                     |{{link.title}}

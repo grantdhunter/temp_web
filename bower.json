@@ -4,13 +4,9 @@
   "version": "0.0.1",
   "dependencies": {
     "bootstrap": "~3.2.0",
-    "angular": "~1.2.21",
-    "angular-route": "1.2.x",
-    "angular-bootstrap": "~0.11.0",
+    "angular": "~1.2.23",
+    "angular-route": "~1.2.23",
     "angular-sanitize": "~1.2.23",
     "angular-resource": "~1.2.23"
-  },
-  "resolutions": {
-    "angular": "1.2.23"
   }
 }

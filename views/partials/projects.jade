@@ -1,15 +1,28 @@
 div.container-fluid
     div.row
-        div.col-xs-8.col-xs-offset-2(ng-repeat='project in projects')
-            div.panel.panel-default
-                div.panel-heading
-                    h3.panel-title
-                        |{{project.title}}
-                div.panel-body
-                    p
-                        |Link:  
-                        a(href='{{project.link}}')
-                            |{{project.link}}
-                    p
-                        |Description: 
-                        b(ng-bind-html='project.description')
+        div.col-xs-8
+            div.row(ng-repeat='project in projects')
+                div.col-xs-12
+                    div.panel.panel-default
+                        div.panel-heading
+                            h3.panel-title
+                                |{{project.title}}
+                        div.panel-body
+                            p
+                                |Link:  
+                                a(href='{{project.link}}')
+                                    |{{project.link}}
+                            p
+                                |Description: 
+                                b(ng-bind-html='project.description')
+        div.col-xs-4
+            div.row
+                div.col-xs-12
+                    div.panel.panel-default
+                        div.panel-heading
+                            h2.panel-title
+                                |Github Projects
+                        div.panel-body
+                            dev.list-group
+                                a(href='{{project.link}}', ng-repeat='project in githubProjects' ).list-group-item
+                                    |{{project.title}}
