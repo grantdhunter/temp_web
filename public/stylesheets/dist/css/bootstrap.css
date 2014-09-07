@@ -879,14 +879,17 @@ th {
 html {
   font-size: 10px;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  height: 100%;
+  background: -webkit-linear-gradient(bottom, #b51c14, transparent), -webkit-linear-gradient(left, #b51c14, transparent), -webkit-linear-gradient(top right, #e8f645, transparent), -webkit-linear-gradient(top, #b51c14, transparent);
+  background: -moz-linear-gradient(top, #edbf4f, transparent), -moz-linear-gradient(bottom left, #fa882f, transparent), -moz-linear-gradient(left top, #ba3d27, transparent), -moz-linear-gradient(right bottom, #9a1d07, transparent);
+  background: -ms-linear-gradient(top, #edbf4f, transparent), -ms-linear-gradient(bottom left, #fa882f, transparent), -ms-linear-gradient(left top, #ba3d27, transparent), -ms-linear-gradient(right bottom, #9a1d07, transparent);
+  background: -o-linear-gradient(top, #edbf4f, transparent), -o-linear-gradient(bottom left, #fa882f, transparent), -o-linear-gradient(left top, #ba3d27, transparent), -o-linear-gradient(right bottom, #9a1d07, transparent);
 }
 body {
   font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 15px;
   line-height: 1.42857143;
   color: #555555;
-  background-color: #3e3c3c;
-  background-image: url('../../../images/bg-8-full.jpg');
 }
 input,
 button,
