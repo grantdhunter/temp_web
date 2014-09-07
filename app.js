@@ -25,6 +25,7 @@ app.use(require('less-middleware')(path.join(__dirname, 'bower_components')));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'bower_components')));
 
+githubService.getGithubRepos();
 githubService.setInterval(86400000);
 
 //routes
