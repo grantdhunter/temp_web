@@ -40,7 +40,7 @@ function startApp() {
         $locationProvider.html5Mode(true);
     });
 
-    webApp.factory('apiService', apiService);
+    webApp.factory('githubService', githubService);
 
     angular.bootstrap(document, ['webApp']);
 }

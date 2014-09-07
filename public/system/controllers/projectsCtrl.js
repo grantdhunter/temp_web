@@ -1,6 +1,6 @@
-function projectsCtrl($scope, $routeParams, apiService) {
+function projectsCtrl($scope, $routeParams, githubService) {
 
-    apiService.query({
+    githubService.query({
         user: 'grantdhunter'
     }, function (projects) {
         $scope.githubProjects = projects;
