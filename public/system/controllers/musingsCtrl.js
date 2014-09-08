@@ -7,14 +7,18 @@ function musingsCtrl($scope, $routeParams) {
         {
             title: 'No One Knows What the F*** They’re Doing (or “The 3 Types of Knowledge”)',
             link: 'http://jangosteve.com/post/380926251/no-one-knows-what-theyre-doing'
+        },
+        {
+            title: 'The expert (Short Comedy Sketch)',
+            link: 'https://www.youtube.com/watch?v=BKorP55Aqvg'
         }
                      ];
 
     $scope.musings = [{
-        title: 'Demo Musing',
+        title: 'Welcome',
         date: 'September 4, 2014',
-        body: 'Normally, both your asses would be dead as fucking fried chicken, but you happen to pull this shit while I\'m in a transitional period so I don\'t wanna kill you, I wanna help you. But I can\'t give you this case, it don\'t belong to me. Besides, I\'ve already been through too much shit this morning over this case to hand it over to your dumb ass.',
-        img: 'http://i0.kym-cdn.com/photos/images/original/000/581/723/a8b.jpg',
+        body: 'Welcome to my website. Here\'s some coding humour to fill up space until I have some real content to put up. Check out my link dump to see things that I found super interesting on the interwebs.',
+        img: 'http://images2.wikia.nocookie.net/__cb20130825215216/vuh/images/thumb/b/b9/My-code-doesnt-work-I-have-no-idea-why-My-code-works-I-have-no-idea-why.jpg/320px-My-code-doesnt-work-I-have-no-idea-why-My-code-works-I-have-no-idea-why.jpg',
         link: ''
     }];
 }

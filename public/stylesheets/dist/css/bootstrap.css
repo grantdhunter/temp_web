@@ -884,6 +884,9 @@ html {
   background: -moz-linear-gradient(top, #edbf4f, transparent), -moz-linear-gradient(bottom left, #fa882f, transparent), -moz-linear-gradient(left top, #ba3d27, transparent), -moz-linear-gradient(right bottom, #9a1d07, transparent);
   background: -ms-linear-gradient(top, #edbf4f, transparent), -ms-linear-gradient(bottom left, #fa882f, transparent), -ms-linear-gradient(left top, #ba3d27, transparent), -ms-linear-gradient(right bottom, #9a1d07, transparent);
   background: -o-linear-gradient(top, #edbf4f, transparent), -o-linear-gradient(bottom left, #fa882f, transparent), -o-linear-gradient(left top, #ba3d27, transparent), -o-linear-gradient(right bottom, #9a1d07, transparent);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  overflow-y: hidden;
 }
 body {
   font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -3868,6 +3871,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   font-size: 19px;
   line-height: 21px;
   height: 50px;
+  line-height: 30px;
 }
 .navbar-brand:hover,
 .navbar-brand:focus {
@@ -4800,7 +4804,7 @@ a.thumbnail.active {
 .list-group-item {
   position: relative;
   display: block;
-  padding: 10px 15px;
+  padding: 5px 15px;
   margin-bottom: -1px;
   background-color: #ffffff;
   border: 1px solid #dddddd;
