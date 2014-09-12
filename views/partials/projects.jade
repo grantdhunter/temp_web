@@ -1,23 +1,25 @@
 div.container-fluid
     div.row
-        div.col-xs-8
+        div.col-sm-8
             div.row(ng-repeat='project in projects')
-                div.col-xs-12
+                div.col-sm-12
                     div.panel.panel-default
                         div.panel-heading
                             h3.panel-title
                                 |{{project.title}}
                         div.panel-body
-                            p
-                                |Link:  
-                                a(href='{{project.link}}')
-                                    |{{project.link}}
-                            p
-                                |Description: 
-                                b(ng-bind-html='project.description')
-        div.col-xs-4
+                            dl.dl-horizontal
+                                dt
+                                    |Link: 
+                                dd
+                                    a(href='{{project.link}}', target='_blank')
+                                        |{{project.link}}
+                                dt
+                                    |Description:
+                                dd(ng-bind-html='project.description')
+        div.col-sm-4
             div.row
-                div.col-xs-12
+                div.col-sm-12
                     div.panel.panel-default
                         div.panel-heading
                             h2.panel-title

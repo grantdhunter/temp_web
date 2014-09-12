@@ -1,4 +1,4 @@
-function appCtrl($scope) {
+function appCtrl($scope, $location) {
     //initial setup
     $scope.siteTitle = "Grant-Hunter.ca";
     $scope.sitePages = [{
@@ -14,21 +14,33 @@ function appCtrl($scope) {
         title: "About",
         id: "about"
     }];
-    
-    $scope.currentPage = $scope.sitePages[0];
 
-    $scope.setCurrentPage = function(page) {
-        if(page === '/') {
-            page = $scope.sitePages[0];   
+    var path = $location.path().slice(1);
+    console.log($scope.sitePages[path]);
+
+    $scope.currentPage = findCurrentPage(path);
+
+    $scope.setCurrentPage = function (page) {
+        if (page === '/') {
+            page = $scope.sitePages[0];
         }
         $scope.currentPage = page;
     }
 
-    $scope.onPage = function(page) {
-        if($scope.currentPage === page) {
-            return true; 
+    $scope.onPage = function (page) {
+        if ($scope.currentPage === page) {
+            return true;
         } else {
             return false;
         }
+    }
+
+    function findCurrentPage(pageId) {
+        for (var i = 0; i < $scope.sitePages.length; i++) {
+            if ($scope.sitePages[i].id === pageId) {
+                return $scope.sitePages[i];
+            }
+        }
+        return $scope.sitePage[0];
     }
 }

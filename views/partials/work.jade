@@ -1,6 +1,6 @@
 div.container-fluid
     div.row
-        div.col-xs-12(ng-repeat='job in jobs')
+        div.col-sm-12(ng-repeat='job in jobs')
             div.panel.panel-default
                 div.panel-heading
                     h3.panel-title
@@ -8,11 +8,12 @@ div.container-fluid
                         small
                             | {{job.date}}
                 div.panel-body
-                    p
-                        |Position: 
-                        b
+                    dl.dl-horizontal
+                        dt
+                            |Position:  
+                        dd
                             |{{job.position}}
-                    p
-                        |Description: 
-                        b
+                        dt
+                            |Description:
+                        dd
                             |{{job.description}}

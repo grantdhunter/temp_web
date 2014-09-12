@@ -1,8 +1,8 @@
 div.container-fluid
     div.row
-        div.col-xs-8
+        div.col-sm-8
             div.row(ng-repeat='musing in musings')
-                div.col-xs-12
+                div.col-sm-12
                     div.panel.panel-default
                         div.panel-heading
                             h2.panel-title
@@ -10,13 +10,13 @@ div.container-fluid
                                 small
                                     | {{musing.date}}
                         div.panel-body
-                            img(src='{{musing.img}}').img-rounded.img-responsive
+                            img(src='{{musing.img}}').img-rounded.img-responsive.center-block
                             p
                                 |{{musing.body}}
                             
-        div.col-xs-4
+        div.col-sm-4
             div.row
-                div.col-xs-12
+                div.col-sm-12
                     div.panel.panel-default
                         div.panel-heading
                             h2.panel-title

@@ -11,6 +11,12 @@ function musingsCtrl($scope, $routeParams) {
         {
             title: 'The expert (Short Comedy Sketch)',
             link: 'https://www.youtube.com/watch?v=BKorP55Aqvg'
+        },{
+            title: 'Same word. Different places? Different meanings',
+            link: 'http://sivers.org/quality'
+        },{
+            title: 'You suck at technical interviews',
+            link: 'http://seldo.com/weblog/2014/08/26/you_suck_at_technical_interviews'
         }
                      ];
 
