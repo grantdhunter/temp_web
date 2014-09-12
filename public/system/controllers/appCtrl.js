@@ -16,12 +16,11 @@ function appCtrl($scope, $location) {
     }];
 
     var path = $location.path().slice(1);
-    console.log($scope.sitePages[path]);
 
     $scope.currentPage = findCurrentPage(path);
 
     $scope.setCurrentPage = function (page) {
-        if (page === '/') {
+        if (page === '/' ) {
             page = $scope.sitePages[0];
         }
         $scope.currentPage = page;
@@ -35,12 +34,14 @@ function appCtrl($scope, $location) {
         }
     }
 
+    //only is used when user first arrives on the page
     function findCurrentPage(pageId) {
+        console.log(pageId);
         for (var i = 0; i < $scope.sitePages.length; i++) {
             if ($scope.sitePages[i].id === pageId) {
                 return $scope.sitePages[i];
             }
         }
-        return $scope.sitePage[0];
+        return $scope.sitePages[0];
     }
 }
