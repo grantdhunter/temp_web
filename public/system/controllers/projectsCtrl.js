@@ -19,7 +19,7 @@ function projectsCtrl($scope, $routeParams, githubService) {
     }, {
         title: 'EventFinder',
         link: 'https://github.com/grantdhunter/eventFinder',
-        description: 'This is a javascript file that ca be used as a node module. Given an event url it finds and returns other events from the same domain. To determine whether a URL is an event link it finds the Levenshtein distance between the given link and the URL. The shorter the distance the larger the odds are that it is an event link.'
+        description: 'This is a javaScript file that ca be used as a node module. Given an event URL it finds and returns other events from the same domain. To determine whether a URL is an event link it finds the Levenshtein distance between the given link and the URL. The shorter the distance the larger the odds are that it is an event link.'
     }];
 
 }
