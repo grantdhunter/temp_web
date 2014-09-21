@@ -8,8 +8,8 @@ var bodyParser = require('body-parser');
 var routes = require('./routes/index');
 var githubService = require('./services/githubService.js');
 
-var app = express();
 
+var app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

@@ -2,7 +2,7 @@
 
 
 // Declare app level module which depends on filters, and services
-var webApp = angular.module('webApp', ['ngRoute','ngSanitize', 'ngResource']);
+var webApp = angular.module('webApp', ['ngRoute', 'ngSanitize', 'ngResource', 'angulartics', 'angulartics.google.analytics']);
 
 
 $(startApp)
